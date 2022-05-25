@@ -1,5 +1,16 @@
+html {
+  height: 100%;
+}
+
 body {
+  background: #5b7a8c;
   font-family: monospace;
+  color: #171518;
+  border-color: #171518;
+  height: 100%;
+  margin: 0;
+  font-size: 1vw;
+  user-select: none;
 }
 
 h1, h2 {
