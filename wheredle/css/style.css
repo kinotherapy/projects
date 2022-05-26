@@ -1,0 +1,33 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background: #5b7a8c;
+	font-family: monospace;
+	color: #171518;
+	border-color: #171518;
+	font-size: 1vw;
+	user-select: none;
+}
+
+#container {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#app {
+	border: 3px inset;
+	background: #3b4a5c;
+	width: 30vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#wrapper {
+	display: flex;
+}
