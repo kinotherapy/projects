@@ -25,7 +25,7 @@ class App extends React.Component {
 			return response.json();
 		}).then(
 			data => {
-				gbData = data;
+				gbData = data.filter(obj => !(/[^a-zA-Z -]/.test(obj.city)));
 				this.randomCity();
 			}
 		)
@@ -36,7 +36,7 @@ class App extends React.Component {
 			return null;
 		return (
 			<div id='wrapper'>
-				<h1>{this.state.message}</h1>
+				{this.state.message}
 			</div>
 		)
 	}
