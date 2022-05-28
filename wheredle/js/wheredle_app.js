@@ -1,6 +1,7 @@
 'use strict';
 
 let gbData = [];
+const MAX_GUESSES = 6;
 
 class App extends React.Component {
 	
@@ -11,7 +12,7 @@ class App extends React.Component {
 			playing: false,
 			cityNameClean: '',
 			cityName: [],
-			guessNo: 2,
+			guessNo: 0,
 			selected: [0, 0],
 			prevGuesses: {}
 			
@@ -21,8 +22,8 @@ class App extends React.Component {
 		this.handleKeyPress = this.handleKeyPress.bind(this);
 	}
 	
-	blankGuess() {
-		
+	blankGuess(raw) {
+		return raw.map(word => Array(word.length).fill(' '))
 	}
 	
 	randomCity() {
@@ -38,7 +39,7 @@ class App extends React.Component {
 			cityName: cityRaw,
 			loading: false,
 			playing: true,
-			currentGuess: cityRaw.map(word => Array(word.length).fill(' '))
+			currentGuess: this.blankGuess(cityRaw)
 		})
 	}
 	
@@ -53,11 +54,11 @@ class App extends React.Component {
 	
 	typeLetter(letter) {
 		let newGuess = this.state.currentGuess;
+		console.log('typing "' + letter + '" in (' + this.state.selected.join(', ') + ')');
 		newGuess[this.state.selected[0]][this.state.selected[1]] = letter;
 		this.setState({
 			currentGuess: newGuess
 		});
-		this.advanceSelection();
 	}
 	
 	advanceSelection() {
@@ -74,18 +75,46 @@ class App extends React.Component {
 		}
 	}
 	
-	devanceSelection() {
+	devanceSelection(backspace) {
+		console.log('moving from (' + this.state.selected.join(', ') + ')');
 		if (this.state.selected[1] == 0) {
 			if (this.state.selected[0] == 0)
 				return;
 			this.setState((state) => ({
 				selected: [state.selected[0] - 1, this.state.cityName[state.selected[0] - 1].length - 1]
-			}));
+			}), () => { if (backspace) this.typeLetter(' ') });
 		} else {
 			this.setState((state) => ({
 				selected: [state.selected[0], state.selected[1] - 1]
-			}));
+			}), () => { if (backspace) this.typeLetter(' ') });
 		}
+		console.log('moved to (' + this.state.selected.join(', ') + ')');
+	}
+	
+	makeGuess() {
+		for (let i = 0; i < this.state.currentGuess.length; i++) {
+			if (this.state.currentGuess[i].includes(' '))
+				return;
+		}
+		let newGuess = this.state.currentGuess;
+		//newGuess = newGuess.map((word, i) => (word.map((letter, j) => return [letter, state] )));
+		newGuess = newGuess.map((word, i) => (word.map((letter, j) => {
+			let state = 'letter-grey';
+			if (this.state.cityName[i][j] == letter) {
+				state = 'letter-green'
+			} else if (this.state.cityName[i].includes(letter)) {
+				state = 'letter-yellow'				
+			} else if (this.state.cityName.join('').includes(letter)) {
+				state = 'letter-blue'				
+			}
+			return [letter, state]
+		})));
+		this.setState(state => ({
+			guessNo: state.guessNo + 1,
+			prevGuesses: [...state.prevGuesses, newGuess],
+			currentGuess: this.blankGuess(state.cityName),
+			selected: [0, 0]
+		}))
 	}
 	
 	handleKeyPress(e) {
@@ -95,10 +124,34 @@ class App extends React.Component {
 					this.advanceSelection();
 					break;
 				case (e.keyCode == 37):
-					this.devanceSelection();
+					this.devanceSelection(false);
 					break;
 				case (e.keyCode >= 65 && e.keyCode <= 90):
 					this.typeLetter(String.fromCharCode(e.keyCode));
+					this.advanceSelection();
+					break;
+				case (e.keyCode == 32):
+					this.typeLetter(' ');
+					this.advanceSelection();
+					break;
+				case (e.keyCode == 46):
+					this.typeLetter(' ');
+					break;
+				case (e.keyCode == 8):
+					if (this.state.currentGuess[this.state.selected[0]][this.state.selected[1]] == ' ') {
+						this.devanceSelection(true);
+						this.typeLetter(' ');
+					} else {
+						this.typeLetter(' ');
+						this.devanceSelection(false);						
+					}
+					break;
+				case (e.keyCode == 13):
+					if (this.state.guessNo < MAX_GUESSES)
+						this.makeGuess();
+					break;
+				default:
+					console.log(e.keyCode)
 					break;
 			}
 		}
@@ -126,7 +179,7 @@ class App extends React.Component {
 		if (this.state.loading)
 			return null;
 		let guessBox = [];
-		for (let k = 0; k < 6; k++)
+		for (let k = 0; k < MAX_GUESSES; k++)
 			guessBox.push(<Guess key = {'guess ' + k} no = {k} {...this.state} letterClick = {this.letterClick} />)
 		return (
 			<div id='wrapper'>
@@ -148,13 +201,15 @@ class Guess extends React.Component {
 		let style = 'letter-not-yet'
 		let ter = '';
 		if (this.props.guessNo > this.props.no) {
-			style = 'letter-previous';
-			ter = letter;
+			ter = this.props.prevGuesses[this.props.no][i][j][0];
+			style = this.props.prevGuesses[this.props.no][i][j][1];
 		} else if (this.props.guessNo == this.props.no) {
+			ter = this.props.currentGuess[i][j];
 			if (i == this.props.selected[0] && j == this.props.selected[1]) {
-				ter = this.props.currentGuess[this.props.selected[0]][this.props.selected[1]];
 				style = 'letter-selected';
-			}			
+			} else if (ter != ' ') {
+				style = 'letter-filled';
+			}				
 		}
 		return <div key = {'letter ' + j} className = {'letter ' + style} onClick = {() => this.props.letterClick(this.props.no, i, j)}> {ter}  </div>
 	}
@@ -170,7 +225,6 @@ class Guess extends React.Component {
 	}
 	
 	render() {
-		
 		let str = this.props.cityName.map((word, i) => this.wordToLetters(word, i));
 		return (
 			<div className = 'guess'>
@@ -180,23 +234,6 @@ class Guess extends React.Component {
 	}
 	
 }
-
-/*class Letter extends React.Component {
-	
-	constructor(props) {
-		super(props)
-		this.state = {
-		}
-	}
-	
-	render() {
-		return (
-			<div className = {'letter ' + this.props.style}>
-				{this.props.letterSingle}
-			</div>
-		)
-	}
-}*/
 
 const container = document.getElementById('app');
 const root = ReactDOM.createRoot(container);

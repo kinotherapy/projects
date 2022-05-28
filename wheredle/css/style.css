@@ -2,24 +2,24 @@
   --dark-blue: #1A2128;
   --mid-blue: #435568;
   --midder-blue: #353F49;
-}
-
-html {
-	height: 100%;
+  --light-blue: #A5D0FF;
+  --winning-green: #64914F;
+  --narrow-yellow: #B59F3A;
+  --true-blue: #3A90B2;
 }
 
 body {
-	height: 100%;
 	background: var(--dark-blue);
 	font-family: monospace;
 	font-size: 1vw;
 }
 
 #container {
-	height: 100%;
+	height: 95vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: vertical;
 }
 
 #app {
@@ -58,7 +58,7 @@ body {
 }
 
 .guess {
-	margin: 0.25vw 0px;
+	margin: 0.25vw 0vw;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
@@ -68,7 +68,7 @@ body {
 .letter {
 	width: 2vw;
 	height: 2vw;
-	margin: 0px 0.25vw;
+	margin: 0vw 0.25vw;
 	border-radius: 0.25vw;
 	font: bold 1.5vw Helvetica, sans-serif;
 	line-height: 2vw;
@@ -76,13 +76,33 @@ body {
 	color: white;
 }
 
-.letter-previous {
+.letter-grey {
 	border: 0.25vw solid var(--midder-blue);
 	background: var(--midder-blue);
 }
 
-.letter-selected {
+.letter-green {
+	border: 0.25vw solid var(--winning-green);
+	background: var(--winning-green);
+}
+
+.letter-yellow {
+	border: 0.25vw solid var(--narrow-yellow);
+	background: var(--narrow-yellow);
+}
+
+.letter-blue {
+	border: 0.25vw solid var(--true-blue);
+	background: var(--true-blue);
+}
+
+.letter-filled {
 	border: 0.25vw solid var(--mid-blue);
+	background: var(--dark-blue);
+}
+
+.letter-selected {
+	border: 0.25vw solid white;
 	background: var(--dark-blue);
 }
 
