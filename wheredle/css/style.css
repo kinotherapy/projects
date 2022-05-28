@@ -1,13 +1,17 @@
+:root {
+  --dark-blue: #1A2128;
+  --mid-blue: #435568;
+  --midder-blue: #353F49;
+}
+
 html {
 	height: 100%;
 }
 
 body {
 	height: 100%;
-	background: #5b7a8c;
+	background: var(--dark-blue);
 	font-family: monospace;
-	color: #171518;
-	border-color: #171518;
 	font-size: 1vw;
 }
 
@@ -25,14 +29,14 @@ body {
 	user-select: none;
 }
 
-#app {
+#app:empty {
   position: absolute;
   top: calc(50% - 4em);
   left: calc(50% - 4em);
   width: 6em;
   height: 6em;
-  border: 1.1em solid rgba(0, 0, 0, 0.2);
-  border-left: 1.1em solid #000000;
+  border: 1.1em solid rgba(0, 0, 0.2, 0.2);
+  border-left: 1.1em solid rgba(0, 0, 0.1, 0.8);
   border-radius: 50%;
   animation: load8 1.1s infinite linear;
 }
@@ -47,12 +51,46 @@ body {
 }
 
 #wrapper {
-	border: 2px inset;
-	background: #3b4a5c;
-	width: 30vw;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: 2vw;
+}
+
+.guess {
+	margin: 0.25vw 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+	width: 100%;
+}
+
+.letter {
+	width: 2vw;
+	height: 2vw;
+	margin: 0px 0.25vw;
+	border-radius: 0.25vw;
+	font: bold 1.5vw Helvetica, sans-serif;
+	line-height: 2vw;
+	text-align: center;
+	color: white;
+}
+
+.letter-previous {
+	border: 0.25vw solid var(--midder-blue);
+	background: var(--midder-blue);
+}
+
+.letter-selected {
+	border: 0.25vw solid var(--mid-blue);
+	background: var(--dark-blue);
+}
+
+.letter-not-yet {
+	border: 0.25vw solid var(--midder-blue);
+	background: var(--dark-blue);
+}
+
+.space {
+	width: 2vw;
 }
