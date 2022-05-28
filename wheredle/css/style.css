@@ -6,6 +6,8 @@
   --winning-green: #64914F;
   --narrow-yellow: #B59F3A;
   --true-blue: #3A90B2;
+  --light-grey: #647789;
+  --choice-red: #AD3A3A;
 }
 
 body {
@@ -55,6 +57,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	font: bold 1.5vw Helvetica, sans-serif;
 }
 
 .guess {
@@ -70,7 +73,6 @@ body {
 	height: 2vw;
 	margin: 0vw 0.25vw;
 	border-radius: 0.25vw;
-	font: bold 1.5vw Helvetica, sans-serif;
 	line-height: 2vw;
 	text-align: center;
 	color: white;
@@ -106,11 +108,95 @@ body {
 	background: var(--dark-blue);
 }
 
-.letter-not-yet {
+.letter-empty {
 	border: 0.25vw solid var(--midder-blue);
 	background: var(--dark-blue);
 }
 
 .space {
 	width: 2vw;
+}
+
+#keyboard {
+	margin: 1vw 0vw;
+}
+	
+.keyboard-row {
+	margin: 0.5vw 0vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;	
+}
+
+.key-button {
+	width: 1.5vw;
+	height: 2vw;
+	margin: 0vw 0.25vw;
+	border-radius: 0.25vw;
+	font-size: 1.2vw;
+	line-height: 2vw;
+	text-align: center;
+	color: white;
+}
+
+.key-enter {
+	border: 0.25vw solid var(--light-grey);
+	background: var(--light-grey);
+	width: 3vw;
+}
+
+.key-backspace {
+	border: 0.25vw solid var(--light-grey);
+	background: var(--light-grey);
+	width: 3vw;
+}
+
+/*.key-enter {
+	border: 0.25vw solid var(--winning-green);
+	background: var(--winning-green);
+	width: 3vw;
+}
+
+.key-backspace {
+	border: 0.25vw solid var(--choice-red);
+	background: var(--choice-red);
+	width: 3vw;
+}*/
+
+.key-unknown {
+	border: 0.25vw solid var(--light-grey);
+	background: var(--light-grey);
+}
+
+.key-grey {
+	border: 0.25vw solid var(--midder-blue);
+	background: var(--midder-blue);
+	color: var(--light-grey);
+}
+
+.key-green {
+	border: 0.25vw solid var(--winning-green);
+	background: var(--winning-green);
+}
+
+.key-yellow {
+	border: 0.25vw solid var(--narrow-yellow);
+	background: var(--narrow-yellow);
+}
+
+.key-blue {
+	border: 0.25vw solid var(--true-blue);
+	background: var(--true-blue);
+}
+
+.plaintext {
+	text-align: center;
+	color: white;
+	margin: 0.3vw 0vw;
+	font-family: monospace
+}
+
+h3.plaintext {
+	color: grey;
 }

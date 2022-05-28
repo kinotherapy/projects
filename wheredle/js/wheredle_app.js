@@ -2,6 +2,8 @@
 
 let gbData = [];
 const MAX_GUESSES = 6;
+const KEYBOARD = [['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'], ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'], ['Z', 'X', 'C', 'V', 'B', 'N', 'M']];
+const WARMER = ['green', 'yellow', 'blue', 'grey'];
 
 class App extends React.Component {
 	
@@ -10,12 +12,13 @@ class App extends React.Component {
 		this.state = {
 			loading: true,
 			playing: false,
-			cityNameClean: '',
+			cityInFull: {},
 			cityName: [],
+			currentGuess: [],
 			guessNo: 0,
 			selected: [0, 0],
-			prevGuesses: {}
-			
+			prevGuesses: [],
+			knowledge: {}
 		}
 		
 		this.letterClick = this.letterClick.bind(this);
@@ -28,18 +31,22 @@ class App extends React.Component {
 	
 	randomCity() {
 		let city = gbData[Math.floor(Math.random() * gbData.length)];
-		if (!(/ /.test(city.city))) {
+		/*if (!(/ /.test(city.city))) {
 			this.randomCity();
 			return;
-		}
+		}*/
 		//city = {city: 'South North Hamptonshire'}
 		let cityRaw = city.city.toUpperCase().split(/[ -]/);
 		this.setState({
-			cityNameClean: city.city,
+			cityInFull: city,
 			cityName: cityRaw,
 			loading: false,
 			playing: true,
-			currentGuess: this.blankGuess(cityRaw)
+			currentGuess: this.blankGuess(cityRaw),
+			guessNo: 0,
+			selected: [0, 0],
+			prevGuesses: [],
+			knowledge: {}
 		})
 	}
 	
@@ -54,7 +61,6 @@ class App extends React.Component {
 	
 	typeLetter(letter) {
 		let newGuess = this.state.currentGuess;
-		console.log('typing "' + letter + '" in (' + this.state.selected.join(', ') + ')');
 		newGuess[this.state.selected[0]][this.state.selected[1]] = letter;
 		this.setState({
 			currentGuess: newGuess
@@ -76,7 +82,6 @@ class App extends React.Component {
 	}
 	
 	devanceSelection(backspace) {
-		console.log('moving from (' + this.state.selected.join(', ') + ')');
 		if (this.state.selected[1] == 0) {
 			if (this.state.selected[0] == 0)
 				return;
@@ -88,7 +93,18 @@ class App extends React.Component {
 				selected: [state.selected[0], state.selected[1] - 1]
 			}), () => { if (backspace) this.typeLetter(' ') });
 		}
-		console.log('moved to (' + this.state.selected.join(', ') + ')');
+	}
+	
+	win() {
+		this.setState({
+			playing: false
+		})
+	}
+	
+	lose() {
+		this.setState({
+			playing: false
+		})
 	}
 	
 	makeGuess() {
@@ -96,23 +112,71 @@ class App extends React.Component {
 			if (this.state.currentGuess[i].includes(' '))
 				return;
 		}
-		let newGuess = this.state.currentGuess;
-		//newGuess = newGuess.map((word, i) => (word.map((letter, j) => return [letter, state] )));
-		newGuess = newGuess.map((word, i) => (word.map((letter, j) => {
-			let state = 'letter-grey';
+		let victory = true;
+		let newGuess = this.state.currentGuess.map((word, i) => (word.map((letter, j) => {
 			if (this.state.cityName[i][j] == letter) {
-				state = 'letter-green'
-			} else if (this.state.cityName[i].includes(letter)) {
-				state = 'letter-yellow'				
-			} else if (this.state.cityName.join('').includes(letter)) {
-				state = 'letter-blue'				
+				return [letter, WARMER[0], false] 
+			} else {
+				victory = false;
+				return [letter, WARMER[3], true]
 			}
-			return [letter, state]
 		})));
+		if (victory)
+			this.win();
+		else if (this.state.guessNo == 5)
+			this.lose();
+		else {
+			for (let i = 0; i < newGuess.length; i++) {
+				for (let j = 0; j < newGuess[i].length; j++) {
+					let letter = newGuess[i][j];
+					if (letter[1] == WARMER[3]) {
+						let check = -1;
+						for (let k = 0; (k < newGuess[i].length) && check == -1; k++) {
+							if (this.state.cityName[i][k][0] == letter[0] && newGuess[i][k][2])
+								check = k;
+						}
+						if (check != -1) {
+							letter[1] = WARMER[1];
+							newGuess[i][check][2] = false;
+						}
+					}
+				}
+			}
+			for (let i = 0; i < newGuess.length; i++) {
+				for (let j = 0; j < newGuess[i].length; j++) {
+					let letter = newGuess[i][j];
+					if (letter[1] == WARMER[3]) {
+						let check = [-1, -1];
+						for (let l = 0; (l < newGuess.length) && check[0] == -1; l++) {
+							if (l != i) {
+								for (let k = 0; (k < newGuess[l].length) && check[0] == -1; k++) {
+									if (this.state.cityName[l][k][0] == letter[0] && newGuess[l][k][2])
+										check = [l, k];
+								}
+							}
+						}
+						if (check[0] != -1) {
+							letter[1] = WARMER[2];
+							newGuess[check[0]][check[1]][2] = false;
+						}
+					}
+				}
+			}
+		}
+		let know = {...this.state.knowledge};
+		for (let i = 0; i < newGuess.length; i++) {
+			for (let j = 0; j < newGuess[i].length; j++) {
+				let ter = newGuess[i][j];
+				if (!know.hasOwnProperty(ter[0]) || (know[ter[0]] > WARMER.indexOf(ter[1]))) {
+					know[ter[0]] = WARMER.indexOf(ter[1]);
+				}
+			}
+		}
 		this.setState(state => ({
 			guessNo: state.guessNo + 1,
 			prevGuesses: [...state.prevGuesses, newGuess],
 			currentGuess: this.blankGuess(state.cityName),
+			knowledge: know,
 			selected: [0, 0]
 		}))
 	}
@@ -154,6 +218,8 @@ class App extends React.Component {
 					console.log(e.keyCode)
 					break;
 			}
+		} else if (!this.state.loading) {
+			this.randomCity();
 		}
 	}
 
@@ -181,9 +247,30 @@ class App extends React.Component {
 		let guessBox = [];
 		for (let k = 0; k < MAX_GUESSES; k++)
 			guessBox.push(<Guess key = {'guess ' + k} no = {k} {...this.state} letterClick = {this.letterClick} />)
+		let keyBox = [];
+		if (this.state.playing) {
+			for (let k = 0; k < KEYBOARD.length; k++)
+				keyBox.push(KEYBOARD[k].map((letter, i) => <div key = {'key ' + KEYBOARD[k][i]}> {KEYBOARD[k][i]} </div> ))
+			keyBox = KEYBOARD.map((row, j) => row.map(
+				(letter, i) => <div key = {'key ' + letter} className = { 'key-button key-' + ((this.state.knowledge.hasOwnProperty(letter)) ? (WARMER[this.state.knowledge[letter]]) : 'unknown') }
+				onClick = {() => { this.typeLetter(letter); this.advanceSelection() }}> {letter} </div>
+			));
+			keyBox[2].unshift(<div key = 'enter' className = 'key-button key-enter' onClick = {() => { this.handleKeyPress({keyCode: 13}) }}> <i className="fa fa-sign-in"/></div>);
+			keyBox[2].push(<div key = 'backspace' className = 'key-button key-backspace' onClick = {() => { this.handleKeyPress({keyCode: 8}) }}> <i className="fa fa-arrow-left"/></div>);
+			keyBox = keyBox.map((row, i) => <div key = {'row + ' + i} className = 'keyboard-row'>{row}</div>);
+		} else {
+			keyBox = [
+				<h1 className = 'plaintext' key = 'h1'>{this.state.cityInFull.city + ', ' + this.state.cityInFull.admin_name}</h1>,
+				<h3 className = 'plaintext' key='h3'>{(this.state.guessNo == 6) ? '(you didn\'t get it lol)' : '(you got it in ' + this.state.guessNo + ' guesses)'}</h3>,
+				<h2 className = 'plaintext' key='h2'>press any key to play again</h2>
+			]
+		}
 		return (
 			<div id='wrapper'>
 				{ guessBox }
+				<div id='keyboard'>
+					{ keyBox }
+				</div>
 			</div>
 		)
 	}
@@ -198,20 +285,20 @@ class Guess extends React.Component {
 	}
 	
 	letterStyling(word, i, letter, j) {
-		let style = 'letter-not-yet'
+		let style = 'empty'
 		let ter = '';
 		if (this.props.guessNo > this.props.no) {
 			ter = this.props.prevGuesses[this.props.no][i][j][0];
 			style = this.props.prevGuesses[this.props.no][i][j][1];
 		} else if (this.props.guessNo == this.props.no) {
 			ter = this.props.currentGuess[i][j];
-			if (i == this.props.selected[0] && j == this.props.selected[1]) {
-				style = 'letter-selected';
+			if ((this.props.playing) && (i == this.props.selected[0]) && (j == this.props.selected[1])) {
+				style = 'selected';
 			} else if (ter != ' ') {
-				style = 'letter-filled';
+				style = 'filled';
 			}				
 		}
-		return <div key = {'letter ' + j} className = {'letter ' + style} onClick = {() => this.props.letterClick(this.props.no, i, j)}> {ter}  </div>
+		return <div key = {'letter ' + j} className = {'letter letter-' + style} onClick = {() => this.props.letterClick(this.props.no, i, j)}> {ter}  </div>
 	}
 	
 	wordToLetters(word, i) {
