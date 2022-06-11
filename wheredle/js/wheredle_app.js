@@ -18,7 +18,8 @@ class App extends React.Component {
 			guessNo: 0,
 			selected: [0, 0],
 			prevGuesses: [],
-			knowledge: {}
+			knowledge: {},
+			won: false
 		}
 		
 		this.letterClick = this.letterClick.bind(this);
@@ -46,7 +47,8 @@ class App extends React.Component {
 			guessNo: 0,
 			selected: [0, 0],
 			prevGuesses: [],
-			knowledge: {}
+			knowledge: {},
+			won: false,
 		})
 	}
 	
@@ -97,7 +99,8 @@ class App extends React.Component {
 	
 	win() {
 		this.setState({
-			playing: false
+			playing: false,
+			won: true
 		})
 	}
 	
@@ -261,7 +264,7 @@ class App extends React.Component {
 		} else {
 			keyBox = [
 				<h1 className = 'plaintext' key = 'h1'>{this.state.cityInFull.city + ', ' + this.state.cityInFull.admin_name}</h1>,
-				<h3 className = 'plaintext' key='h3'>{(this.state.guessNo == 6) ? '(you didn\'t get it lol)' : '(you got it in ' + this.state.guessNo + ' guesses)'}</h3>,
+				<h3 className = 'plaintext' key='h3'>{(this.state.won) ? '(you got it in ' + this.state.guessNo + ' guess' + ((this.state.guessNo == 1) ? ')' : 'es)') : '(you didn\'t get it lol)' }</h3>,
 				<h2 className = 'plaintext' key='h2'>press any key to play again</h2>
 			]
 		}
@@ -285,7 +288,7 @@ class Guess extends React.Component {
 	}
 	
 	letterStyling(word, i, letter, j) {
-		let style = 'empty'
+		let style = 'future'
 		let ter = '';
 		if (this.props.guessNo > this.props.no) {
 			ter = this.props.prevGuesses[this.props.no][i][j][0];
@@ -296,7 +299,9 @@ class Guess extends React.Component {
 				style = 'selected';
 			} else if (ter != ' ') {
 				style = 'filled';
-			}				
+			} else {
+				style = 'empty'
+			}
 		}
 		return <div key = {'letter ' + j} className = {'letter letter-' + style} onClick = {() => this.props.letterClick(this.props.no, i, j)}> {ter}  </div>
 	}

@@ -1,5 +1,6 @@
 :root {
   --dark-blue: #1A2128;
+  --compromise: #252D36;
   --mid-blue: #435568;
   --midder-blue: #353F49;
   --light-blue: #A5D0FF;
@@ -100,15 +101,20 @@ body {
 
 .letter-filled {
 	border: 0.25vw solid var(--mid-blue);
-	background: var(--dark-blue);
+	background: var(--compromise);
 }
 
 .letter-selected {
 	border: 0.25vw solid white;
-	background: var(--dark-blue);
+	background: var(--compromise);
 }
 
 .letter-empty {
+	border: 0.25vw solid var(--midder-blue);
+	background: var(--compromise);
+}
+
+.letter-future {
 	border: 0.25vw solid var(--midder-blue);
 	background: var(--dark-blue);
 }

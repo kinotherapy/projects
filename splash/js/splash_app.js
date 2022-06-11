@@ -11,7 +11,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var cardsData = {};
 var set = Math.floor(Math.random() * 5 + 1);
 //console.log('set ' + set);
-var jason = 'https://kinotherapy.github.io/jsons/set' + set + '-en_us.json';
+//var jason = 'https://kinotherapy.github.io/jsons/set' + set + '-en_us.json';
+var jason = '../lor-jsons/latest/set' + set + '-en_us/en_us/data/set' + set + '-en_us.json';
 
 var App = function (_React$Component) {
   _inherits(App, _React$Component);
