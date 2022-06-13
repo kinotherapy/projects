@@ -11,90 +11,112 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var cardsData = {};
 var set = Math.floor(Math.random() * 5 + 1);
 //console.log('set ' + set);
-//var jason = 'https://kinotherapy.github.io/jsons/set' + set + '-en_us.json';
 var jason = '../lor-jsons/latest/set' + set + '-en_us/en_us/data/set' + set + '-en_us.json';
 
+var loadImage = function loadImage(src) {
+	return new Promise(function (resolve, reject) {
+		var img = new Image();
+		img.onload = function () {
+			return resolve(img);
+		};
+		img.onerror = reject;
+		img.src = src;
+	});
+};
+
 var App = function (_React$Component) {
-  _inherits(App, _React$Component);
+	_inherits(App, _React$Component);
 
-  function App(props) {
-    _classCallCheck(this, App);
+	function App(props) {
+		_classCallCheck(this, App);
 
-    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
-    _this.state = {
-      name: '',
-      ft: '',
-      img: ''
-    };
-    _this.newCard = _this.newCard.bind(_this);
-    return _this;
-  }
+		_this.state = {
+			loading: true,
+			name: '',
+			ft: '',
+			img: ''
+		};
+		_this.newCard = _this.newCard.bind(_this);
+		return _this;
+	}
 
-  _createClass(App, [{
-    key: 'newCard',
-    value: function newCard() {
-      console.log('new card');
-      var card = cardsData[Math.floor(Math.random() * cardsData.length)];
-      this.setState({
-        name: card.name,
-        ft: card.flavorText,
-        img: card.cardCode
-      });
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
+	_createClass(App, [{
+		key: 'newCard',
+		value: function newCard() {
+			var _this2 = this;
 
-      fetch(jason).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        cardsData = data;
-        _this2.newCard();
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var twit = 'https://twitter.com/intent/tweet?hashtags=LegendsOfRuneterra&text=' + encodeURIComponent('my favourite card is ' + this.state.name + ' :}');
-      //var imag = 'https://cdn-lor.mobalytics.gg/production/images/set' + set + '/en_us/img/card/game/' + this.state.img + '-full.png';
-      var imag = 'https://dd.b.pvp.net/latest/set' + set + '/en_us/img/cards/' + this.state.img + '-full.png';
-      console.log(twit);
-      return React.createElement(
-        'div',
-        { id: 'quote-box' },
-        React.createElement(
-          'div',
-          { id: 'author' },
-          this.state.name.toUpperCase()
-        ),
-        React.createElement('img', { id: 'image', src: imag, alt: 'Card Art' }),
-        React.createElement(
-          'div',
-          { id: 'text' },
-          this.state.ft
-        ),
-        React.createElement(
-          'div',
-          { id: 'footer' },
-          React.createElement(
-            'a',
-            { onClick: this.newCard, id: 'new-quote' },
-            React.createElement('i', { 'class': 'fa fa-rotate-right' })
-          ),
-          React.createElement('div', { id: 'spacing' }),
-          React.createElement(
-            'a',
-            { href: twit, id: 'tweet-quote', target: '_top' },
-            React.createElement('i', { 'class': 'fa fa-twitter' })
-          )
-        )
-      );
-    }
-  }]);
+			this.setState({
+				loading: true
+			});
+			console.log('new card');
+			var card = cardsData[Math.floor(Math.random() * cardsData.length)];
+			var imag = '../lor-jsons/latest/set' + set + '-en_us/en_us/img/cards/' + card.cardCode + '-full.png';
+			console.log(imag);
+			loadImage(imag).then(function (image) {
+				console.log('loaded');
+				_this2.setState({
+					name: card.name,
+					ft: card.flavorText,
+					img: imag,
+					loading: false
+				});
+			});
+		}
+	}, {
+		key: 'componentDidMount',
+		value: function componentDidMount() {
+			var _this3 = this;
 
-  return App;
+			fetch(jason).then(function (response) {
+				return response.json();
+			}).then(function (data) {
+				cardsData = data;
+				_this3.newCard();
+			});
+		}
+	}, {
+		key: 'render',
+		value: function render() {
+			if (this.state.loading) return null;
+			var twit = 'https://twitter.com/intent/tweet?hashtags=LegendsOfRuneterra&text=' + encodeURIComponent('my favourite card is ' + this.state.name + ' :}');
+			//let imag = 'https://cdn-lor.mobalytics.gg/production/images/set' + set + '/en_us/img/card/game/' + this.state.img + '-full.png'
+			console.log(twit);
+			return React.createElement(
+				'div',
+				{ id: 'quote-box' },
+				React.createElement(
+					'div',
+					{ id: 'author' },
+					this.state.name.toUpperCase()
+				),
+				React.createElement('img', { id: 'image', src: this.state.img, alt: 'Card Art' }),
+				React.createElement(
+					'div',
+					{ id: 'text' },
+					this.state.ft
+				),
+				React.createElement(
+					'div',
+					{ id: 'footer' },
+					React.createElement(
+						'a',
+						{ onClick: this.newCard, id: 'new-quote' },
+						React.createElement('i', { 'class': 'fa fa-rotate-right' })
+					),
+					React.createElement('div', { id: 'spacing' }),
+					React.createElement(
+						'a',
+						{ href: twit, id: 'tweet-quote', target: '_top' },
+						React.createElement('i', { 'class': 'fa fa-twitter' })
+					)
+				)
+			);
+		}
+	}]);
+
+	return App;
 }(React.Component);
 
 var container = document.getElementById('app');
