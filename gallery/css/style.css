@@ -13,6 +13,15 @@ div {
   margin: 10px 0px 10px 0px;
 }
 
+#quote-box {
+  width: 75%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #app:empty {
   position: absolute;
   top: calc(50% - 4em);
@@ -32,15 +41,6 @@ div {
   100% {
     transform: rotate(360deg);
   }
-}
-
-#quote-box {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 #new-quote {
