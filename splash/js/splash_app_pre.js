@@ -32,12 +32,14 @@ class App extends React.Component {
 		});
 		console.log('new card')
 		let card = cardsData[Math.floor(Math.random() * cardsData.length)];
-		let imag = 'https://dd.b.pvp.net/latest/set' + set + '/en_us/img/cards/' + card.cardCode + '-full.png';
+		let imag = '../lor-jsons/latest/set' + set + '-en_us/en_us/img/cards/' + card.cardCode + '-full.png';
+		console.log(imag);
 		loadImage(imag).then(image => {
+			console.log('loaded');
 			this.setState({
 				name: card.name,
 				ft: card.flavorText,
-				img: card.cardCode,
+				img: imag,
 				loading: false
 			}) 
 			}
@@ -57,14 +59,13 @@ class App extends React.Component {
 			return null;
 		let twit = 'https://twitter.com/intent/tweet?hashtags=LegendsOfRuneterra&text=' + encodeURIComponent('my favourite card is ' + this.state.name + ' :}');
 		//let imag = 'https://cdn-lor.mobalytics.gg/production/images/set' + set + '/en_us/img/card/game/' + this.state.img + '-full.png'
-		let imag = 'https://dd.b.pvp.net/latest/set' + set + '/en_us/img/cards/' + this.state.img + '-full.png';
 		console.log(twit)
 		return (
 			<div id='quote-box'>
 				<div id='author'>
 					{this.state.name.toUpperCase()}
 				</div>
-				<img id='image' src={imag} alt="Card Art"  />
+				<img id='image' src={this.state.img} alt="Card Art"  />
 				<div id='text'>
 					{this.state.ft}
 				</div>
