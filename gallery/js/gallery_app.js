@@ -1,8 +1,8 @@
 'use strict';
 
 let cardsData = [];
+let artists = {}
 const sets = ['Foundations', 'Rising Tides', 'Call of the Mountain', 'Empires of the Ascended', 'Beyond the Bandlewood', 'Worldwalker'];
-const artists = {}
 
 const loadImage = (src) =>
   new Promise((resolve, reject) => {
@@ -47,7 +47,6 @@ class App extends React.Component {
 	}
 	
 	jsonsGotten(jsons) {
-		console.log(jsons.length)
 		cardsData = jsons.reduce((p,c) => [...p, ...c], []);
 		for (let i = 0; i < cardsData.length; i++) {
 			let card = cardsData[i];
@@ -61,7 +60,8 @@ class App extends React.Component {
 			if (!artists.hasOwnProperty(artist)) artists[artist] = [];
 			artists[artist].push([card.name, card]);
 		}
-		console.log(Object.entries(artists));
+		artists = Object.entries(artists).sort((a,b) => (a[1].length < b[1].length));
+		console.log(artists);
 		this.setState({
 			loading: false
 		})
