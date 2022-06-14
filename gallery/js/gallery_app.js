@@ -1,7 +1,8 @@
 'use strict';
 
-let cardsData = {};
+let cardsData = [];
 const sets = ['Foundations', 'Rising Tides', 'Call of the Mountain', 'Empires of the Ascended', 'Beyond the Bandlewood', 'Worldwalker'];
+const artists = {}
 
 const loadImage = (src) =>
   new Promise((resolve, reject) => {
@@ -22,9 +23,45 @@ class App extends React.Component {
 		this.jsonsGotten = this.jsonsGotten.bind(this)
 	}
 	
-	jsonsGotten(data) {
-		cardsData = data;
-		console.log(data)
+	unRiotWording(name) {
+		switch (name) {
+			case 'Kudos Illustrations':
+			case 'Kudos Production':
+			case 'Kudos Productions ':
+				return 'Kudos Productions';
+			case 'Wild Blue':
+			case 'Wild Blue Studios':
+				return 'Wild Blue Studio';
+			case 'MICHAEL IVAN':
+			case 'Michal Ivan':
+				return 'Michael Ivan';
+			case 'Jihun Lee':
+				return 'JiHun Lee';
+			case 'Polar Engine Studio':
+				return 'Polar Engine';
+			case '':
+				return 'Unknown';
+			default:
+				return name;
+		}
+	}
+	
+	jsonsGotten(jsons) {
+		console.log(jsons.length)
+		cardsData = jsons.reduce((p,c) => [...p, ...c], []);
+		for (let i = 0; i < cardsData.length; i++) {
+			let card = cardsData[i];
+			/*let fap = card.assets[0].fullAbsolutePath
+			if (fap.substring(fap.length - card.cardCode.length - 9, fap.length - 9) != card.cardCode) {
+				console.log(fap.length);
+				console.log(card.cardCode);
+				console.log(fap.substring(fap.length - card.cardCode.length - 9, fap.length - 9));
+			}*/
+			let artist = this.unRiotWording(card.artistName)
+			if (!artists.hasOwnProperty(artist)) artists[artist] = [];
+			artists[artist].push([card.name, card]);
+		}
+		console.log(Object.entries(artists));
 		this.setState({
 			loading: false
 		})
