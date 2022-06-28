@@ -3752,7 +3752,7 @@
       "BandleCity"
     ],
     "attack": 0,
-    "cost": 5,
+    "cost": 4,
     "health": 0,
     "description": "Destroy a landmark or create 2 random multi-region followers in hand.",
     "descriptionRaw": "Destroy a landmark or create 2 random multi-region followers in hand.",
@@ -3794,7 +3794,7 @@
       "BandleCity"
     ],
     "attack": 0,
-    "cost": 5,
+    "cost": 4,
     "health": 0,
     "description": "Destroy a landmark.",
     "descriptionRaw": "Destroy a landmark.",
@@ -3836,7 +3836,7 @@
       "BandleCity"
     ],
     "attack": 0,
-    "cost": 5,
+    "cost": 4,
     "health": 0,
     "description": "Create 2 random multi-region followers in hand.",
     "descriptionRaw": "Create 2 random multi-region followers in hand.",
@@ -5491,8 +5491,12 @@
     "artistName": "Polar Engine",
     "name": "Lava Lizard",
     "cardCode": "05BC015T1",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Impact"
+    ],
+    "keywordRefs": [
+      "Impact"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "None",
@@ -5654,8 +5658,8 @@
     "regionRefs": [
       "BandleCity"
     ],
-    "attack": 3,
-    "cost": 4,
+    "attack": 2,
+    "cost": 3,
     "health": 3,
     "description": "When you summon another ally, grant me +1|+0.",
     "descriptionRaw": "When you summon another ally, grant me +1|+0.",
@@ -6143,11 +6147,11 @@
     "regionRefs": [
       "BandleCity"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 3,
-    "health": 3,
-    "description": "When an ally transforms, fully heal it and grant it +1|+1.",
-    "descriptionRaw": "When an ally transforms, fully heal it and grant it +1|+1.",
+    "health": 4,
+    "description": "When an ally transforms, fully heal it and grant it +1|+1 and <link=keyword.Impact><sprite name=Impact><style=Keyword>Impact</style></link>.",
+    "descriptionRaw": "When an ally transforms, fully heal it and grant it +1|+1 and Impact.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Chief Nakotak declared himself leader of the tribe after finding a large dinosaur bone in the snowdrifts surrounding their lands. None of the others were aware that dinosaur bones equated to tribe leadership, but also none of the others were really all that bothered. So Nakotak it was.",
@@ -6185,7 +6189,7 @@
     ],
     "attack": 3,
     "cost": 3,
-    "health": 3,
+    "health": 2,
     "description": "Each round, the first Fae you play costs 2 less.",
     "descriptionRaw": "Each round, the first Fae you play costs 2 less.",
     "levelupDescription": "",
@@ -6265,9 +6269,9 @@
     "regionRefs": [
       "BandleCity"
     ],
-    "attack": 8,
+    "attack": 9,
     "cost": 8,
-    "health": 6,
+    "health": 7,
     "description": "When I'm summoned, grant me a random keyword for each allied landmark you've destroyed this game. <style=Variable></style>\r\nWhen you destroy an allied landmark, grant me a random keyword.",
     "descriptionRaw": "When I'm summoned, grant me a random keyword for each allied landmark you've destroyed this game. \r\nWhen you destroy an allied landmark, grant me a random keyword.",
     "levelupDescription": "",
@@ -6687,7 +6691,7 @@
     ],
     "attack": 1,
     "cost": 2,
-    "health": 1,
+    "health": 2,
     "description": "<link=vocab.Play><style=Vocab>Play</style></link>: Discard 1 to <link=vocab.Manifest><style=Vocab>Manifest</style></link> a Mecha-Yordle.",
     "descriptionRaw": "Play: Discard 1 to Manifest a Mecha-Yordle.",
     "levelupDescription": "",
@@ -6732,7 +6736,7 @@
     "attack": 1,
     "cost": 2,
     "health": 4,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>SpellShield</style></link> and +2|+2 this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.SpellShield><sprite name=SpellShield><style=Keyword>SpellShield</style></link> and +2|+2 this round.",
     "descriptionRaw": "Support: Give my supported ally SpellShield and +2|+2 this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -6741,10 +6745,12 @@
     "name": "Geode Mechaforcer",
     "cardCode": "05BC171",
     "keywords": [
-      "Impact"
+      "Impact",
+      "Support"
     ],
     "keywordRefs": [
-      "Impact"
+      "Impact",
+      "Support"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -7067,9 +7073,9 @@
       "BandleCity",
       "Shurima"
     ],
-    "attack": 4,
+    "attack": 3,
     "cost": 3,
-    "health": 2,
+    "health": 3,
     "description": "<link=vocab.Attack><style=Vocab>Attack</style></link>: Grant the top champion in your deck +1|+1 and a random keyword.",
     "descriptionRaw": "Attack: Grant the top champion in your deck +1|+1 and a random keyword.",
     "levelupDescription": "",
@@ -7950,9 +7956,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 4,
-    "health": 3,
+    "health": 4,
     "description": "<link=vocab.RoundEnd><style=Vocab>Round End</style></link>: If you've damaged the enemy Nexus this round, transform me into <link=card.transform><style=AssociatedCard>Murkwolf Rager</style></link>.",
     "descriptionRaw": "Round End: If you've damaged the enemy Nexus this round, transform me into Murkwolf Rager.",
     "levelupDescription": "",
@@ -7994,9 +8000,9 @@
     "regionRefs": [
       "Freljord"
     ],
-    "attack": 5,
+    "attack": 4,
     "cost": 4,
-    "health": 5,
+    "health": 6,
     "description": "When I transform, draw a unit.",
     "descriptionRaw": "When I transform, draw a unit.",
     "levelupDescription": "",
@@ -9501,8 +9507,8 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "Pick an ally being targeted by enemy <link=keyword.Fast><sprite name=Fast><style=Keyword>Fast</style></link> spells, <link=keyword.Slow><sprite name=Slow><style=Keyword>Slow</style></link> spells, or <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Skills</style></link> with only 1 target. Stop them.",
-    "descriptionRaw": "Pick an ally being targeted by enemy Fast spells, Slow spells, or Skills with only 1 target. Stop them.",
+    "description": "Pick an ally being targeted by enemy <link=keyword.Fast><sprite name=Fast><style=Keyword>Fast</style></link> spells, <link=keyword.Slow><sprite name=Slow><style=Keyword>Slow</style></link> spells, or <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Skills</style></link> with only 1 allied target. Stop them.",
+    "descriptionRaw": "Pick an ally being targeted by enemy Fast spells, Slow spells, or Skills with only 1 allied target. Stop them.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "An arrow knows neither the intent of the hunter, nor the worth of its prey.",
@@ -11376,7 +11382,7 @@
     "regionRefs": [
       "Noxus"
     ],
-    "attack": 2,
+    "attack": 3,
     "cost": 4,
     "health": 4,
     "description": "When a non-<link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> ally in hand is discarded, create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> copy of it in hand.",
@@ -12001,7 +12007,7 @@
     ],
     "attack": 4,
     "cost": 6,
-    "health": 5,
+    "health": 6,
     "description": "If you would get a mana gem, instead refill your spell mana.\r\nWhen you play a spell, create in hand a random spell that costs 3 or less and give it <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link>.",
     "descriptionRaw": "If you would get a mana gem, instead refill your spell mana.\r\nWhen you play a spell, create in hand a random spell that costs 3 or less and give it Fleeting.",
     "levelupDescription": "",
@@ -12159,7 +12165,7 @@
     ],
     "attack": 3,
     "cost": 4,
-    "health": 4,
+    "health": 5,
     "description": "Whenever your opponent draws, plant 1 <link=card.shuffle><style=AssociatedCard>Flashbomb Trap</style></link> randomly in the top 8 cards in the enemy deck. ",
     "descriptionRaw": "Whenever your opponent draws, plant 1 Flashbomb Trap randomly in the top 8 cards in the enemy deck. ",
     "levelupDescription": "",
@@ -12968,7 +12974,7 @@
     ],
     "attack": 2,
     "cost": 2,
-    "health": 2,
+    "health": 1,
     "description": "<link=vocab.Play><style=Vocab>Play</style></link>: <link=vocab.Manifest><style=Vocab>Manifest</style></link> a 6+ cost spell from your regions.",
     "descriptionRaw": "Play: Manifest a 6+ cost spell from your regions.",
     "levelupDescription": "",
@@ -15353,7 +15359,7 @@
     "attack": 3,
     "cost": 4,
     "health": 5,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: I take all damage for my supported ally this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: I take all damage for my supported ally this round.",
     "descriptionRaw": "Support: I take all damage for my supported ally this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -15361,8 +15367,12 @@
     "artistName": "Kudos Productions",
     "name": "Petricite Stag",
     "cardCode": "05DE013",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "EPIC",
@@ -15437,7 +15447,7 @@
     "attack": 1,
     "cost": 3,
     "health": 4,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally +0|+2 and <link=keyword.Formidable><sprite name=Formidable><style=Keyword>Formidable</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally +0|+2 and <link=keyword.Formidable><sprite name=Formidable><style=Keyword>Formidable</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally +0|+2 and Formidable this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -15445,8 +15455,12 @@
     "artistName": "Kudos Productions",
     "name": "Durand Architect",
     "cardCode": "05DE019",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARE",
@@ -15513,8 +15527,8 @@
     "attack": 0,
     "cost": 2,
     "health": 3,
-    "description": "",
-    "descriptionRaw": "",
+    "description": "When you summon another ally, grant me <link=keyword.Challenger><sprite name=Challenger><style=Keyword>Challenger</style></link>.",
+    "descriptionRaw": "When you summon another ally, grant me Challenger.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "As the Broadwing passed overhead, the battered Demacian soldiers below let out a cheer, inspired by its enduring form.",
@@ -15522,11 +15536,9 @@
     "name": "Petricite Broadwing",
     "cardCode": "05DE012",
     "keywords": [
-      "Challenger",
       "Formidable"
     ],
     "keywordRefs": [
-      "Challenger",
       "Formidable"
     ],
     "spellSpeed": "",

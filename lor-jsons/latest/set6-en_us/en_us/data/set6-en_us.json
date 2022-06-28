@@ -1977,8 +1977,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Pick a unit. The next time it takes damage this round, kill it.\r\nCreate an <link=card.level1><style=AssociatedCard>Annie</style></link> in your deck.",
-    "descriptionRaw": "Pick a unit. The next time it takes damage this round, kill it.\r\nCreate an Annie in your deck.",
+    "description": "Pick a unit. The next time it takes 1 or more damage this round, kill it.\r\nCreate an <link=card.level1><style=AssociatedCard>Annie</style></link> in your deck.",
+    "descriptionRaw": "Pick a unit. The next time it takes 1 or more damage this round, kill it.\r\nCreate an Annie in your deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Headmistress Telsi spoke at length about the Noxian tenets, leaving the children before her increasingly bored and restless. But, while most students largely contained their outbursts, Annie acted. First with smoke, then with fire.",
@@ -2332,10 +2332,10 @@
     "name": "Legion Deserter",
     "cardCode": "06NX030",
     "keywords": [
-      "Overwhelm"
+      "Fearsome"
     ],
     "keywordRefs": [
-      "Overwhelm"
+      "Fearsome"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2501,8 +2501,8 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Pick a unit. The next time it takes damage this round, kill it.",
-    "descriptionRaw": "Pick a unit. The next time it takes damage this round, kill it.",
+    "description": "Pick a unit. The next time it takes 1 or more damage this round, kill it.",
+    "descriptionRaw": "Pick a unit. The next time it takes 1 or more damage this round, kill it.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Headmistress Telsi spoke at length about the Noxian tenets, leaving the children before her increasingly bored and restless. But, while most students largely contained their outbursts, Annie acted. First with smoke, then with fire.",
@@ -2757,7 +2757,7 @@
     "regionRefs": [
       "Noxus"
     ],
-    "attack": 1,
+    "attack": 2,
     "cost": 3,
     "health": 3,
     "description": "When you play a <link=keyword.Fast><sprite name=Fast><style=Keyword>Fast</style></link> spell, <link=keyword.Slow><sprite name=Slow><style=Keyword>Slow</style></link> spell, or <link=keyword.Skill><sprite name=SkillMark><style=Keyword>Skill</style></link>, grant me +1|+0.",
@@ -3242,7 +3242,7 @@
     "attack": 0,
     "cost": 2,
     "health": 2,
-    "description": "When I'm summoned, plant a <link=card.chime><style=AssociatedCard>Chime</style></link> on the top card of your deck.\r\n<link=vocab.Support><style=Vocab>Support</style></link>: Grant my supported ally +1|+1.",
+    "description": "When I'm summoned, plant a <link=card.chime><style=AssociatedCard>Chime</style></link> on the top card of your deck.\r\n<link=keyword.Support><style=Keyword>Support</style></link>: Grant my supported ally +1|+1.",
     "descriptionRaw": "When I'm summoned, plant a Chime on the top card of your deck.\r\nSupport: Grant my supported ally +1|+1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -3251,10 +3251,12 @@
     "name": "Esmus, Breath of the World",
     "cardCode": "06MT029",
     "keywords": [
-      "Elusive"
+      "Elusive",
+      "Support"
     ],
     "keywordRefs": [
-      "Elusive"
+      "Elusive",
+      "Support"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -3616,8 +3618,8 @@
     "attack": 0,
     "cost": 7,
     "health": 0,
-    "description": "Pick one of two new 2 cost cards to create in hand and set its cost to 0 this round. Repeat two more times.",
-    "descriptionRaw": "Pick one of two new 2 cost cards to create in hand and set its cost to 0 this round. Repeat two more times.",
+    "description": "Pick one of two new 2 cost spells to create in hand and set its cost to 0 this round. Repeat two more times.",
+    "descriptionRaw": "Pick one of two new 2 cost spells to create in hand and set its cost to 0 this round. Repeat two more times.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Zaun's first songspinner was surprisingly reliable. The only downside was that nobody could figure out how to control the volume.",
@@ -3835,8 +3837,8 @@
     "attack": 0,
     "cost": 6,
     "health": 0,
-    "description": "Give enemies -2|-0 this round. Create an <link=card.create><style=AssociatedCard>Instant Century</style></link> in hand.",
-    "descriptionRaw": "Give enemies -2|-0 this round. Create an Instant Century in hand.",
+    "description": "Give enemies -2|-0 this round. Create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Instant Century</style></link> in hand.",
+    "descriptionRaw": "Give enemies -2|-0 this round. Create a Fleeting Instant Century in hand.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "The sands of time flow without thought or consideration. Theirs is a scheme of cruel indifference, but not all are slave to its callous machinations...",

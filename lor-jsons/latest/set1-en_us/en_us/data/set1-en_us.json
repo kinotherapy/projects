@@ -316,7 +316,7 @@
     "attack": 2,
     "cost": 2,
     "health": 2,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Lifesteal</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.Lifesteal><sprite name=Lifesteal><style=Keyword>Lifesteal</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally Lifesteal this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -324,8 +324,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Herald of Spring",
     "cardCode": "01IO045",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -1322,16 +1326,20 @@
     "attack": 3,
     "cost": 4,
     "health": 5,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally Barrier this round.",
-    "levelupDescription": "I've seen allies gain <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> 4+ times<style=Variable></style>.",
-    "levelupDescriptionRaw": "I've seen allies gain Barrier 4+ times.",
+    "levelupDescription": "I've seen allies gain <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> 5+ times<style=Variable></style>.",
+    "levelupDescriptionRaw": "I've seen allies gain Barrier 5+ times.",
     "flavorText": "\"Like hands clasped, the mortal and spirit realms intertwine...\" ",
     "artistName": "SIXMOREVODKA",
     "name": "Shen",
     "cardCode": "01IO032",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Barrier"
+    ],
+    "keywordRefs": [
+      "Barrier"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "Champion",
@@ -1363,7 +1371,7 @@
     "attack": 4,
     "cost": 4,
     "health": 6,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round.\r\nWhen an ally gets <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link>, give it +3|+0 this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round.\r\nWhen an ally gets <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link>, give it +3|+0 this round.",
     "descriptionRaw": "Support: Give my supported ally Barrier this round.\r\nWhen an ally gets Barrier, give it +3|+0 this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -1371,8 +1379,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Shen",
     "cardCode": "01IO032T1",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Barrier"
+    ],
+    "keywordRefs": [
+      "Barrier"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "None",
@@ -1859,7 +1871,7 @@
     ],
     "attack": 4,
     "cost": 7,
-    "health": 2,
+    "health": 3,
     "description": "When I'm summoned, give other allies +2|+2 this round.",
     "descriptionRaw": "When I'm summoned, give other allies +2|+2 this round.",
     "levelupDescription": "",
@@ -4608,7 +4620,7 @@
     "attack": 3,
     "cost": 2,
     "health": 2,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>Quick Attack</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.Quick Strike><sprite name=QuickStrike><style=Keyword>Quick Attack</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally Quick Attack this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4616,8 +4628,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Legion Drummer",
     "cardCode": "01NX017",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -5094,7 +5110,7 @@
       "Noxus"
     ],
     "attack": 4,
-    "cost": 5,
+    "cost": 4,
     "health": 3,
     "description": "When I'm summoned, draw 1 for each 5+ Power ally you have.",
     "descriptionRaw": "When I'm summoned, draw 1 for each 5+ Power ally you have.",
@@ -5592,7 +5608,7 @@
     "attack": 5,
     "cost": 5,
     "health": 4,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally +3|+0 and <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Overwhelm</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally +3|+0 and <link=keyword.Overwhelm><sprite name=Overwhelm><style=Keyword>Overwhelm</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally +3|+0 and Overwhelm this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -5600,8 +5616,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Kato The Arm",
     "cardCode": "01NX024",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "EPIC",
@@ -6748,7 +6768,7 @@
     "attack": 2,
     "cost": 2,
     "health": 2,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally +1|+1 this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally +1|+1 this round.",
     "descriptionRaw": "Support: Give my supported ally +1|+1 this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -6756,8 +6776,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "War Chefs",
     "cardCode": "01DE043",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -7915,9 +7939,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 3,
+    "attack": 2,
     "cost": 2,
-    "health": 2,
+    "health": 1,
     "description": "<link=vocab.Play><style=Vocab>Play</style></link>: Give an ally <link=keyword.Barrier><sprite name=Barrier><style=Keyword>Barrier</style></link> this round.",
     "descriptionRaw": "Play: Give an ally Barrier this round.",
     "levelupDescription": "",
@@ -7993,9 +8017,9 @@
     "regionRefs": [
       "Demacia"
     ],
-    "attack": 2,
+    "attack": 3,
     "cost": 4,
-    "health": 2,
+    "health": 3,
     "description": "<link=vocab.Attack><style=Vocab>Attack</style></link>: Grant me +2|+2.",
     "descriptionRaw": "Attack: Grant me +2|+2.",
     "levelupDescription": "",
@@ -8751,7 +8775,7 @@
     "attack": 2,
     "cost": 3,
     "health": 4,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Create 4 copies of the supported ally in your deck.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Create 4 copies of the supported ally in your deck.",
     "descriptionRaw": "Support: Create 4 copies of the supported ally in your deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -8759,8 +8783,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Parade Electrorig",
     "cardCode": "01PZ007",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -9904,8 +9932,8 @@
     "health": 3,
     "description": "<link=vocab.NexusStrike><style=Vocab>Nexus Strike</style></link>: Create a <link=keyword.Fleeting><sprite name=Fleeting><style=Keyword>Fleeting</style></link> <link=card.create><style=AssociatedCard>Mystic Shot</style></link> in hand.",
     "descriptionRaw": "Nexus Strike: Create a Fleeting Mystic Shot in hand.",
-    "levelupDescription": "You've targeted enemies 6+ times<style=Variable></style>.",
-    "levelupDescriptionRaw": "You've targeted enemies 6+ times.",
+    "levelupDescription": "You've targeted enemies 8+ times<style=Variable></style>.",
+    "levelupDescriptionRaw": "You've targeted enemies 8+ times.",
     "flavorText": "\"Goggles? Check. Scarf? Check. Awesome gauntlet-with-magical-properties-that-I-totally understand? Check, check, aaaand check!\"",
     "artistName": "SIXMOREVODKA",
     "name": "Ezreal",
@@ -11607,7 +11635,7 @@
     "attack": 1,
     "cost": 2,
     "health": 3,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Give my supported ally <link=keyword.Elusive><sprite name=Elusive><style=Keyword>Elusive</style></link> this round.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Give my supported ally <link=keyword.Elusive><sprite name=Elusive><style=Keyword>Elusive</style></link> this round.",
     "descriptionRaw": "Support: Give my supported ally Elusive this round.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -11615,8 +11643,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Intrepid Mariner",
     "cardCode": "01PZ042",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARE",
@@ -13320,7 +13352,7 @@
     ],
     "attack": 5,
     "cost": 5,
-    "health": 5,
+    "health": 6,
     "description": "When I'm summoned, grant all allies in your deck +1|+1.",
     "descriptionRaw": "When I'm summoned, grant all allies in your deck +1|+1.",
     "levelupDescription": "",
@@ -14724,7 +14756,7 @@
     ],
     "attack": 3,
     "cost": 4,
-    "health": 3,
+    "health": 4,
     "description": "When I'm summoned, draw a unit with 5+ Power.",
     "descriptionRaw": "When I'm summoned, draw a unit with 5+ Power.",
     "levelupDescription": "",
@@ -15200,8 +15232,8 @@
     "attack": 6,
     "cost": 6,
     "health": 7,
-    "description": "<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link> allies have +3|+0.\r\n<link=vocab.Attack><style=Vocab>Attack</style></link>: Summon 2 attacking <link=card.summon><style=AssociatedCard>Spectral Riders</style></link>.",
-    "descriptionRaw": "Ephemeral allies have +3|+0.\r\nAttack: Summon 2 attacking Spectral Riders.",
+    "description": "When I level up, grant your Nexus \"<link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link> allies have +3|+0\".\r\n<link=vocab.Attack><style=Vocab>Attack</style></link>: Summon 2 attacking <link=card.summon><style=AssociatedCard>Spectral Riders</style></link>.",
+    "descriptionRaw": "When I level up, grant your Nexus \"Ephemeral allies have +3|+0\".\r\nAttack: Summon 2 attacking Spectral Riders.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "Listen. Hear him ride. The trampling of hooves. The creak of armor, long-worn and rusted. The ghostly cries of soldiers, echoes of the past. The resounding silence that follows.",
@@ -15209,12 +15241,10 @@
     "name": "Hecarim",
     "cardCode": "01SI042T1",
     "keywords": [
-      "Overwhelm",
-      "Missing Translation"
+      "Overwhelm"
     ],
     "keywordRefs": [
-      "Overwhelm",
-      "AuraVisualFakeKeyword"
+      "Overwhelm"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -15462,9 +15492,9 @@
     "regionRefs": [
       "ShadowIsles"
     ],
-    "attack": 4,
+    "attack": 3,
     "cost": 3,
-    "health": 3,
+    "health": 4,
     "description": "",
     "descriptionRaw": "",
     "levelupDescription": "I've seen 3+ allies die<style=Variable></style>.",
@@ -15507,9 +15537,9 @@
     "regionRefs": [
       "ShadowIsles"
     ],
-    "attack": 5,
+    "attack": 4,
     "cost": 3,
-    "health": 4,
+    "health": 5,
     "description": "Each round, the first time I attack revive an attacking <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link> copy of the <link=vocab.Strongest><style=Vocab>strongest</style></link> dead allied follower. This round, we're bonded and it takes damage for me.",
     "descriptionRaw": "Each round, the first time I attack revive an attacking Ephemeral copy of the strongest dead allied follower. This round, we're bonded and it takes damage for me.",
     "levelupDescription": "",
@@ -16446,7 +16476,7 @@
     "attack": 3,
     "cost": 2,
     "health": 2,
-    "description": "<link=vocab.Support><style=Vocab>Support</style></link>: Grant my supported ally +2|+0 and <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link>.",
+    "description": "<link=keyword.Support><style=Keyword>Support</style></link>: Grant my supported ally +2|+0 and <link=keyword.Ephemeral><sprite name=Ephemeral><style=Keyword>Ephemeral</style></link>.",
     "descriptionRaw": "Support: Grant my supported ally +2|+0 and Ephemeral.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -16454,8 +16484,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Stirred Spirits",
     "cardCode": "01SI009",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Support"
+    ],
+    "keywordRefs": [
+      "Support"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",

@@ -1307,7 +1307,7 @@
     "attack": 3,
     "cost": 2,
     "health": 2,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Grant 1 cost allies <link=vocab.Everywhere><style=Vocab>everywhere</style></link> +1|+0.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant 1 cost allies <link=vocab.Everywhere><style=Vocab>everywhere</style></link> +1|+0.",
     "descriptionRaw": "Plunder: Grant 1 cost allies everywhere +1|+0.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -1315,8 +1315,12 @@
     "artistName": "JiHun Lee",
     "name": "Jagged Taskmaster",
     "cardCode": "02BW055",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "EPIC",
@@ -1345,7 +1349,7 @@
     "attack": 4,
     "cost": 6,
     "health": 5,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Heal allies and your Nexus 3, then <link=vocab.Rally><style=Vocab>Rally</style></link>.\r\n",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Heal allies and your Nexus 3, then <link=vocab.Rally><style=Vocab>Rally</style></link>.\r\n",
     "descriptionRaw": "Plunder: Heal allies and your Nexus 3, then Rally.\r\n",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -1353,8 +1357,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Citrus Courier",
     "cardCode": "02BW017",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARE",
@@ -1507,7 +1515,7 @@
     "attack": 2,
     "cost": 1,
     "health": 2,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Grant me +1|+1.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant me +1|+1.",
     "descriptionRaw": "Plunder: Grant me +1|+1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -1515,8 +1523,12 @@
     "artistName": "Slawomir Maniak",
     "name": "Jagged Butcher",
     "cardCode": "02BW058",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -1544,19 +1556,23 @@
     "regionRefs": [
       "Bilgewater"
     ],
-    "attack": 6,
+    "attack": 7,
     "cost": 8,
-    "health": 4,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Play <link=card.cast><style=AssociatedCard>Cannon Barrage</style></link> 6 times on randomly targeted enemies.",
-    "descriptionRaw": "Plunder: Play Cannon Barrage 6 times on randomly targeted enemies.",
+    "health": 5,
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Play <link=card.cast><style=AssociatedCard>Cannon Barrage</style></link> 7 times on randomly targeted enemies.",
+    "descriptionRaw": "Plunder: Play Cannon Barrage 7 times on randomly targeted enemies.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
     "flavorText": "\"Sail past the sailors, sail past the wreck,\nThe battle's already over.\nThe smoke's cleared the water, their captain's met Rex,\nAnd their ship's ripped an' torn timber.\" - \"Home With You, Sally\"",
     "artistName": "MAR Studio",
     "name": "Riptide Rex",
     "cardCode": "02BW028",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "EPIC",
@@ -2001,7 +2017,7 @@
     "attack": 3,
     "cost": 7,
     "health": 4,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Reduce the cost of allies in your hand and deck by 2.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Reduce the cost of allies in your hand and deck by 2.",
     "descriptionRaw": "Plunder: Reduce the cost of allies in your hand and deck by 2.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -2010,10 +2026,12 @@
     "name": "Smooth Soloist",
     "cardCode": "02BW050",
     "keywords": [
-      "Elusive"
+      "Elusive",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Elusive"
+      "Elusive",
+      "Plunder"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -2087,7 +2105,7 @@
     "attack": 1,
     "cost": 1,
     "health": 1,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Grant me 2 random keywords.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Grant me 2 random keywords.",
     "descriptionRaw": "Plunder: Grant me 2 random keywords.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -2095,8 +2113,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Plunder Poro",
     "cardCode": "02BW010",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -2327,7 +2349,7 @@
     "attack": 2,
     "cost": 2,
     "health": 2,
-    "description": "When you draw an enemy card, reduce its cost by 1.\r\n<link=vocab.Plunder><style=Vocab>Plunder</style></link>: <link=keyword.Nab><style=Keyword>Nab</style></link> 1.",
+    "description": "When you draw an enemy card, reduce its cost by 1.\r\n<link=keyword.Plunder><style=Keyword>Plunder</style></link>: <link=keyword.Nab><style=Keyword>Nab</style></link> 1.",
     "descriptionRaw": "When you draw an enemy card, reduce its cost by 1.\r\nPlunder: Nab 1.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -2335,8 +2357,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "Black Market Merchant",
     "cardCode": "02BW033",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "RARE",
@@ -3533,7 +3559,7 @@
     "attack": 0,
     "cost": 6,
     "health": 0,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: <link=keyword.Recall><style=Keyword>Recall</style></link> ANY follower into your hand.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: <link=keyword.Recall><style=Keyword>Recall</style></link> ANY follower into your hand.",
     "descriptionRaw": "Plunder: Recall ANY follower into your hand.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -3542,10 +3568,12 @@
     "name": "Strong-arm",
     "cardCode": "02BW003",
     "keywords": [
-      "Slow"
+      "Slow",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Slow"
+      "Slow",
+      "Plunder"
     ],
     "spellSpeed": "Slow",
     "spellSpeedRef": "Slow",
@@ -4085,7 +4113,7 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=keyword.Nab><style=Keyword>Nab</style></link> 1.\r\n<link=vocab.Plunder><style=Vocab>Plunder</style></link>: <link=keyword.Nab><style=Keyword>Nab</style></link> 1 more.",
+    "description": "<link=keyword.Nab><style=Keyword>Nab</style></link> 1.\r\n<link=keyword.Plunder><style=Keyword>Plunder</style></link>: <link=keyword.Nab><style=Keyword>Nab</style></link> 1 more.",
     "descriptionRaw": "Nab 1.\r\nPlunder: Nab 1 more.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4094,10 +4122,12 @@
     "name": "Pilfered Goods",
     "cardCode": "02BW049",
     "keywords": [
-      "Burst"
+      "Burst",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Plunder"
     ],
     "spellSpeed": "Burst",
     "spellSpeedRef": "Burst",
@@ -4169,7 +4199,7 @@
     "attack": 0,
     "cost": 3,
     "health": 0,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Draw a random non-champion card from the enemy hand.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Draw a random non-champion card from the enemy hand.",
     "descriptionRaw": "Plunder: Draw a random non-champion card from the enemy hand.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4178,10 +4208,12 @@
     "name": "Sleight of Hand",
     "cardCode": "02BW063",
     "keywords": [
-      "Slow"
+      "Slow",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Slow"
+      "Slow",
+      "Plunder"
     ],
     "spellSpeed": "Slow",
     "spellSpeedRef": "Slow",
@@ -4379,7 +4411,7 @@
     "attack": 4,
     "cost": 4,
     "health": 3,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Get an empty mana gem.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Get an empty mana gem.",
     "descriptionRaw": "Plunder: Get an empty mana gem.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4388,10 +4420,12 @@
     "name": "Wolfrider",
     "cardCode": "02FR009",
     "keywords": [
-      "Overwhelm"
+      "Overwhelm",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Overwhelm"
+      "Overwhelm",
+      "Plunder"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -4548,7 +4582,7 @@
     "attack": 4,
     "cost": 5,
     "health": 6,
-    "description": "<link=vocab.Plunder><style=Vocab>Plunder</style></link>: I transform into <link=card.transform><style=AssociatedCard>Stormclaw Ursine</style></link>.",
+    "description": "<link=keyword.Plunder><style=Keyword>Plunder</style></link>: I transform into <link=card.transform><style=AssociatedCard>Stormclaw Ursine</style></link>.",
     "descriptionRaw": "Plunder: I transform into Stormclaw Ursine.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4556,8 +4590,12 @@
     "artistName": "Kudos Productions",
     "name": "Ursine Spiritwalker",
     "cardCode": "02FR005",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "COMMON",
@@ -4632,7 +4670,7 @@
     "attack": 0,
     "cost": 2,
     "health": 0,
-    "description": "Grant the top 3 units in your deck +1|+1.\r\n<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Draw 1 of them.",
+    "description": "Grant the top 3 units in your deck +1|+1.\r\n<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Draw 1 of them.",
     "descriptionRaw": "Grant the top 3 units in your deck +1|+1.\r\nPlunder: Draw 1 of them.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4641,10 +4679,12 @@
     "name": "Shared Spoils",
     "cardCode": "02FR010",
     "keywords": [
-      "Burst"
+      "Burst",
+      "Plunder"
     ],
     "keywordRefs": [
-      "Burst"
+      "Burst",
+      "Plunder"
     ],
     "spellSpeed": "Burst",
     "spellSpeedRef": "Burst",
@@ -4677,7 +4717,7 @@
     "attack": 7,
     "cost": 8,
     "health": 7,
-    "description": "When I'm summoned, Draw a <link=card.champ1><style=AssociatedCard>Sejuani</style></link>.\r\n<link=vocab.Plunder><style=Vocab>Plunder</style></link>: Double the Power and Health of allies in your deck.",
+    "description": "When I'm summoned, Draw a <link=card.champ1><style=AssociatedCard>Sejuani</style></link>.\r\n<link=keyword.Plunder><style=Keyword>Plunder</style></link>: Double the Power and Health of allies in your deck.",
     "descriptionRaw": "When I'm summoned, Draw a Sejuani.\r\nPlunder: Double the Power and Health of allies in your deck.",
     "levelupDescription": "",
     "levelupDescriptionRaw": "",
@@ -4685,8 +4725,12 @@
     "artistName": "SIXMOREVODKA",
     "name": "The Tuskraider",
     "cardCode": "02FR008",
-    "keywords": [],
-    "keywordRefs": [],
+    "keywords": [
+      "Plunder"
+    ],
+    "keywordRefs": [
+      "Plunder"
+    ],
     "spellSpeed": "",
     "spellSpeedRef": "",
     "rarity": "EPIC",
@@ -6485,7 +6529,7 @@
     "regionRefs": [
       "ShadowIsles"
     ],
-    "attack": 1,
+    "attack": 2,
     "cost": 3,
     "health": 1,
     "description": "<link=vocab.Play><style=Vocab>Play</style></link>: Kill an ally to summon 2 <link=card.create><style=AssociatedCard>Saplings</style></link>.",
