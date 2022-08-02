@@ -1335,10 +1335,12 @@
     "name": "Shen",
     "cardCode": "01IO032",
     "keywords": [
-      "Barrier"
+      "Barrier",
+      "Support"
     ],
     "keywordRefs": [
-      "Barrier"
+      "Barrier",
+      "Support"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
@@ -1380,10 +1382,12 @@
     "name": "Shen",
     "cardCode": "01IO032T1",
     "keywords": [
-      "Barrier"
+      "Barrier",
+      "Support"
     ],
     "keywordRefs": [
-      "Barrier"
+      "Barrier",
+      "Support"
     ],
     "spellSpeed": "",
     "spellSpeedRef": "",
